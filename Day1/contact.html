@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Contact Info Form</h1>
+    <form>
+        <label for="Company">Company Name:</label>
+        <input type="text" id="Companyname" name="Companyname" placeholder="Company Name"><br><br>
+
+        <label for="Cname">Contact Name:</label><br>
+        <input type="text" id="fname" name="lname" placeholder="First Name" required>
+        <input type="text" id="lname" name="fname" placeholder="Last Name" required><br><br>
+
+        <label for="email">Email Address :</label>
+        <input type="email" id="email" name="email" placeholder="Email Address" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX"><br><br>
+        
+        <label for="Address">Address:</label><br>
+        <input type="text" id="street" name="street" placeholder="Street Address" required><br>
+        <input type="text" id="city" name="city" placeholder="City" required>
+        <input type="text" id="region" name="region" placeholder="Region" required><br>
+        <input type="text" id="region" name="region" placeholder="Postal / Zip Code" required>
+        <input type="text" id="country" name="country" placeholder="Country" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+[
+{ _id: 1, customerId: "customer1", productId: 1, quantity: 2 },
+{ _id: 2, customerId: "customer2", productId: 3, quantity: 1 },
+{ _id: 3, customerId: "customer1", productId: 4, quantity: 3 },
+{ _id: 4, customerId: "customer3", productId: 2, quantity: 2 },
+{ _id: 5, customerId: "customer2", productId: 5, quantity: 1 },
+{ _id: 6, customerId: "customer4", productId: 1, quantity: 1 },
+{ _id: 7, customerId: "customer1", productId: 2, quantity: 4 }
+]

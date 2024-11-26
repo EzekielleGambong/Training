@@ -1,0 +1,14 @@
+1. Retrieve all documents from the collection.
+   db.books.find({});
+
+2. Retrieve documents where the genre is "Romance".
+   db.books.find({ genre: "Romance" });
+
+3. Retrieve documents where the publication year is greater than 1950.
+   db.books.find({ publicationYear: { $gt: 1950 } });
+
+4. Retrieve documents where the author's name starts with "J".
+   db.books.find({ author: { $regex: /^J/ } });
+
+5. Retrieve documents where the title contains the word "the".
+   db.books.find({ title: { $regex: /the/i } });

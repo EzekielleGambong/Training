@@ -1,0 +1,50 @@
+"users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "role": "Admin"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "password456",
+      "role": "User"
+    }
+  ],
+"blogPosts": [
+    {
+      "id": 1,
+      "title": "Introduction to Blogging",
+      "authorId": 1,
+      "content": "This is a blog post introducing the concept of blogging and its benefits.",
+      "categories": ["Technology", "Writing"],
+      "tags": ["Blogging", "Content Creation"]
+    },
+    {
+      "id": 2,
+      "title": "Tips for Writing Engaging Blog Posts",
+      "authorId": 2,
+      "content": "Here are some tips to help you write engaging and captivating blog posts.",
+      "categories": ["Writing", "Content Creation"],
+      "tags": ["Blogging", "Writing Tips"]
+    }
+  ],
+"comments": [
+    {
+      "id": 1,
+      "authorId": 2,
+      "content": "Great introduction to blogging! Looking forward to more posts.",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "authorId": 1,
+      "content": "Excellent tips for writing engaging blog posts. Thanks for sharing!",
+      "postId": 2
+    }
+  ],
+"categories": ["Technology", "Writing", "Content Creation"],
+"tags": ["Blogging", "Content Creation", "Writing Tips"]

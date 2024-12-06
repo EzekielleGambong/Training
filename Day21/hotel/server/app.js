@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const errorHandler = require('./utils/errorHandler');
 const userRoutes = require('./routes/userRoutes');
 const roomRoutes = require('./routes/roomRoutes');
-
+const reservationRoutes = require('./routes/reservationRoutes');
 dotenv.config();
 
 const connectToDatabase = async () => {
@@ -26,6 +26,7 @@ app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/rooms', roomRoutes);
+app.use('/api/reservations', reservationRoutes);
 
 app.use(errorHandler);
 

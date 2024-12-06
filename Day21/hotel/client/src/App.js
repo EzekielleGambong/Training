@@ -1,34 +1,45 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const errorHandler = require('./utils/errorHandler');
-const userRoutes = require('./routes/userRoutes');
-const roomRoutes = require('./routes/roomRoutes');
 
-dotenv.config();
+import logo from "./logo.svg";
+import { Route, Routes } from "react-router"; import "./App.css";
+import Navbar from "./Components/Navbar"
+import Home from "./Components/Home";
+import { Router } from "express";
+import RoomList from "./Components/RoomList";
+import RoomDetails from "./Components/RoomDetails";
 
-const connectToDatabase = async () => {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("Connect to MongoDB");
-  } catch (error) {
-    console.error("Error connecting to MongoDB: ", error);
-  }
-};
+function App() { 
+  return ( 
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <Home />
+          </>
+        }
+      />
 
-connectToDatabase();
+      <Route
+        path="/rooms"
+        element={
+          <>
+            <Navbar />
+            <RoomList />
+          </>
+        }
+      />
 
-const app = express();
-app.use(express.json());
-
-app.use('/api/users', userRoutes);
-app.use('/api/rooms', roomRoutes);
-
-app.use(errorHandler);
-
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
-});
+      <Route
+        path="/rooms/:id"
+        element={
+          <>
+            <Navbar />
+            <RoomDetails />
+          </>
+        }
+      />      
+    </Routes>
+  );
+}
+export default App;
